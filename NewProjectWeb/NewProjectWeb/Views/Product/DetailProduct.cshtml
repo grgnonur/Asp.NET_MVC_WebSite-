@@ -1,0 +1,21 @@
+﻿@using NewProjectWeb.Models.Classes
+@model List<Product>
+@{
+    ViewBag.Title = "DetailProduct";
+    Layout = "~/Views/Shared/_ProductDetailLayout.cshtml";
+}
+
+<div class="container">
+    <h1>ÜRÜN DETAY</h1>
+    <br />
+    @foreach (var item in Model)
+    {
+        <div>
+            <img src="@item.ProductImage" alt="Alternate Text" height="450" width="1200" />
+            <br /><br />
+            <h2>@item.ProductName</h2>
+            <br /><br />
+            <p>@item.ProductDescription</p>
+        </div>
+    }
+</div>

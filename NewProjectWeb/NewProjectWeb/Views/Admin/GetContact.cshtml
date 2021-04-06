@@ -1,0 +1,29 @@
+﻿@model NewProjectWeb.Models.Classes.Contact
+@{
+    ViewBag.Title = "GetContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>İLETİŞİM GÜNCELLEME</h2>
+
+@using (Html.BeginForm("UpdateContact", "Admin", FormMethod.Get))
+{
+    @Html.LabelFor(x => x.ID, new { @hidden = "hidden" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly", @hidden = "hidden" })
+
+    <br />
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Address, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.PhoneNumber)
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PhoneNumber, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color:red" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+}

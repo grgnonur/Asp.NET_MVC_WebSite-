@@ -1,0 +1,33 @@
+﻿@model NewProjectWeb.Models.Classes.Product
+@{
+    ViewBag.Title = "GetProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<h1>ÜRÜN GÜNCELLEME SAYFASI</h1>
+
+@using (Html.BeginForm("UpdateProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(x => x.ID, new { @hidden="hidden"})
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly",@hidden="hidden" })
+    <br />
+    @Html.LabelFor(x => x.ProductName)
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ProductName, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.ProductDescription)
+    @Html.TextAreaFor(x => x.ProductDescription, 5, 1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ProductDescription, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.ProductImage)
+    <input type="file" name="ProductImage" />
+    <br />
+    @Html.ValidationMessageFor(x => x.ProductImage, "", new { @style = "color:red" })
+    <br />
+    <br />
+    <button class="btn btn-info">Ürün Güncelle</button>
+
+}
+
+

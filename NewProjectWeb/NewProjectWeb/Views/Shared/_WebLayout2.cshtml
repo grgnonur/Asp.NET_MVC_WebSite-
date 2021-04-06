@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FirmaİsimBaşlığı</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+    <link href="~/webprojetemplate/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/webprojetemplate/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/denemecss.css" rel="stylesheet" />
+
+    <script src="~/Scripts/Deneme.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <span class="icon icon-cog"></span>
+                <h1><a href="#">Firmaİsmi</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="active"><a href="/HomePage/Index" title="">ANASAYFA</a></li>
+                    <li><a href="/HomePage/Index" title="">HAKKIMIZDA</a></li>
+                    <li><a href="/HomePage/Index" title="">ÜRÜNLER</a></li>
+                    <li><a href="/HomePage/Index" title="">İLETİŞİM</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="portfolio" class="container">
+            @RenderBody()
+        </div>
+    </div>
+    <div id="copyright" style="background-color: #2056ac">
+        <ul class="contact">
+            <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+            <li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+            <li><a href="#" class="icon icon-instagram"><span>İnstagram</span></a></li>
+        </ul>
+        <br />
+        <div class="my-1">
+            <a href="mailto:kskonurgurgen@gmail.com" class="btn btn-primary">
+                <span class="icon icon-envelope"></span> E-mail
+                Gönder
+            </a>
+        </div>
+        <br />
+        <br />
+        <p>&copy; Tüm Hakları Saklıdır | Design by Onur Gürgen.</p>
+
+    </div>
+</body>
+</html>

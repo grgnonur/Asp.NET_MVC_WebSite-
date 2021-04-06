@@ -1,0 +1,30 @@
+﻿@using NewProjectWeb.Models.Classes
+@model List<Contact>
+@{
+    ViewBag.Title = "ContactIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>İLETİŞİM SAYFASI</h1>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>Adres</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Address</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Mail</td>
+            <td><a href="/Admin/GetContact/@item.ID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+

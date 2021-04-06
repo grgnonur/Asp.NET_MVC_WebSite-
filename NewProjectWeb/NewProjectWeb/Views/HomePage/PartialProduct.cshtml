@@ -1,0 +1,35 @@
+﻿@using NewProjectWeb.Models.Classes
+@model List<Product>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+
+<div class="con-bot" style="width:auto; height:auto; text-align:center ">
+    <h1 style="text-align:center">ÜRÜNLER</h1>
+    <br /><br />
+    @foreach (var item in Model)
+    {
+        <div style="width:29%;float:left;" class="left">
+            <div class="bot-left">
+                <div class="text-center">
+                    <img src="@item.ProductImage" alt="" width="200" height="300"/>
+                    <br /><br /><br /><br />
+                </div>
+                <div class="left-text">
+                    <h4>@item.ProductName</h4>
+                    <p>@item.ProductDescription.Substring(0,20)<a href="/Product/DetailProduct/@item.ID" type="button" class="btn btn-light"><strong>...</strong></a></p>
+                </div>
+            </div>
+        </div>
+    }
+    <div>
+        <p style="text-align:center"><a href=/Product/Index class="button btn-info">Tüm Ürünleri Gör</a></p>
+    </div>
+</div>
+
+
+
+
+
+

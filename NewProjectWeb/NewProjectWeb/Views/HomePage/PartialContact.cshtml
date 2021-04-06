@@ -1,0 +1,32 @@
+﻿@using NewProjectWeb.Models.Classes
+@model List<Contact>
+
+
+<div class="contact">
+    <h1 style="text-align:center">İLETİŞİM</h1>
+    <br /><br />
+    @foreach (var item in Model)
+    {
+        <div id="footer">
+            <div class="container">
+                <div class="fbox1">
+                    <span class="icon icon-map-marker"></span>
+                    <span>
+                        @item.Address
+                    </span>
+                </div>
+                <div class="fbox1">
+                    <span class="icon icon-phone"></span>
+                    <span>
+                        @item.PhoneNumber
+                    </span>
+                </div>
+                <div class="fbox1">
+                    <span class="icon icon-envelope"></span>
+                    <span>@item.Mail</span>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

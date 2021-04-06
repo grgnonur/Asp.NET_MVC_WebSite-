@@ -1,0 +1,26 @@
+﻿@model NewProjectWeb.Models.Classes.About
+@{
+    ViewBag.Title = "GetAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>HAKKIMIZDA GÜNCELLEME</h1>
+
+@using (Html.BeginForm("UpdateAbout", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(x => x.ID, new { @hidden = "hidden" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly", @hidden="hidden" })
+    <br />
+    @Html.LabelFor(x => x.Description)
+    @Html.TextAreaFor(x => x.Description, 15, 1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.Photo)
+    <input type="file" name="Photo" />
+    <br />
+    @Html.ValidationMessageFor(x => x.Photo, "", new { @style = "color:red" })
+    <br />
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+}

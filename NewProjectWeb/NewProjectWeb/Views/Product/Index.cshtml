@@ -1,0 +1,35 @@
+﻿@model IEnumerable<NewProjectWeb.Models.Classes.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_WebLayout2.cshtml";
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+}
+
+<h2>ÜRÜNLER LİSTESİ</h2>
+
+<div class="con-bot" style="width:auto; height:auto; text-align:center ">
+    <br />
+    <br />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div style="width:29%;float:left;" class="left col-sm">
+                <div class="bot-left">
+                    <div class="text-center">
+                        <img src="@item.ProductImage" alt="" width="200" height="300" />
+                    </div>
+                    <div class="left-text" style=" overflow: hidden;">
+                        <h4>@item.ProductName</h4>
+                        <div>
+                            <p>@item.ProductDescription.Substring(0, 15) <a href="/Product/DetailProduct/@item.ID" type="button" class="btn btn-light"><strong>...</strong></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

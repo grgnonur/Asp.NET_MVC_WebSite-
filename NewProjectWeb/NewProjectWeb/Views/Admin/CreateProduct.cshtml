@@ -1,0 +1,27 @@
+﻿@model NewProjectWeb.Models.Classes.Product
+@{
+    ViewBag.Title = "CreateProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Ürün Ekleme</h2>
+<br />
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+    @Html.LabelFor(x => x.ProductName)
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ProductName, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.ProductDescription)
+    @Html.TextBoxFor(x => x.ProductDescription, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ProductDescription, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.ProductImage)<br />
+    @*@Html.TextBoxFor(x => x.ProductImage, new { @class = "form-control" })*@
+    <input type="file" name="ProductImage" />
+    <br />
+    @Html.ValidationMessageFor(x => x.ProductImage, "", new { @style = "color:red" })
+    <br /><br />
+    <button class="btn btn-primary">Ürün Kaydet</button>
+</form>
+

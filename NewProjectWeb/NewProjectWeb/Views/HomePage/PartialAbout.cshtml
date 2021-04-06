@@ -1,0 +1,17 @@
+﻿@using NewProjectWeb.Models.Classes
+@model List<About>
+
+
+
+<div class="container">
+    <div><h1 style="text-align:center">HAKKIMIZDA</h1></div>
+    <br />
+    @foreach (var item in Model)
+    {
+        <div style="text-align:center"><img src="@item.Photo" alt="Hakkımızda" height="500" width="1500" /></div>
+        <br />
+        <br />
+        <p>@item.Description</p>
+
+    }
+</div>
