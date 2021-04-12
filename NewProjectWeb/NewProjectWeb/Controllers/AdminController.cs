@@ -210,7 +210,7 @@ namespace NewProjectWeb.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View("CreateProductbrand");
+                return View("GetProductbrand");
             }
             FileUploadImage(pb);
 
