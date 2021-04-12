@@ -23,7 +23,6 @@ namespace NewProjectWeb.Controllers
             var degerler = context.Products.ToList();
             return View(degerler);
         }
-       
         [Authorize]
         [HttpGet]
         public ActionResult CreateProduct()
@@ -164,6 +163,75 @@ namespace NewProjectWeb.Controllers
             return RedirectToAction("ContactIndex");
         }
 
+
+        //Admin ProductBrand
+        [Authorize]
+        public ActionResult ProductbrandIndex()
+        {
+            var Productbrand = context.Productbrands.ToList();
+            return View(Productbrand);
+        }
+        [Authorize]
+        [HttpGet]
+        public ActionResult CreateProductbrand()
+        {
+            return View();
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult CreateProductbrand(Productbrand pb)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("CreateProductbrand");
+            }
+            FileUploadImage(pb);
+
+            context.Productbrands.Add(pb);
+            context.SaveChanges();
+            return RedirectToAction("ProductbrandIndex");
+        }
+        [Authorize]
+        public ActionResult DeleteProductbrand(int id)
+        {
+            var delete = context.Productbrands.Find(id);
+            context.Productbrands.Remove(delete);
+            context.SaveChanges();
+            return RedirectToAction("ProductbrandIndex");
+        }
+        [Authorize]
+        public ActionResult GetProductbrand(int id)
+        {
+            var productbrand = context.Productbrands.Find(id);
+            return View("GetProductbrand",productbrand);
+        }
+        [Authorize]
+        public ActionResult UpdateProductbrand(Productbrand pb)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("CreateProductbrand");
+            }
+            FileUploadImage(pb);
+
+            var productbrand = context.Productbrands.Find(pb.ID);
+            productbrand.ProductbrandImage= pb.ProductbrandImage;
+            context.SaveChanges();
+            return RedirectToAction("ProductbrandIndex");
+        }
+
+        //File Upload ile resim Yükleme işlemi Productbrand için
+        private void FileUploadImage(Productbrand pb)
+        {
+            if (Request.Files.Count > 0)
+            {
+                string filename = Path.GetFileName(Request.Files[0].FileName);
+                string _filename = DateTime.Now.ToString("yymmssfff") + filename;
+                string url = "~/Image/" + _filename;
+                Request.Files[0].SaveAs(Server.MapPath(url));
+                pb.ProductbrandImage = "/Image/" + _filename;
+            }
+        }
 
 
     }

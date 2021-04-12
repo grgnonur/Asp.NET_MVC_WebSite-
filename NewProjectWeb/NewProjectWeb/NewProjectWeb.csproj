@@ -139,6 +139,7 @@
     <Compile Include="Models\Classes\Admin.cs" />
     <Compile Include="Models\Classes\Contact.cs" />
     <Compile Include="Models\Classes\Product.cs" />
+    <Compile Include="Models\Classes\Productbrand.cs" />
     <Compile Include="Models\Context\DataBaseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,9 +152,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\denemecss.css" />
     <Content Include="Content\LoginCss.css" />
+    <Content Include="favicon-16x16.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\Foçalı.jpeg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -318,10 +321,13 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Shared\_ProductDetailLayout.cshtml" />
     <Content Include="Views\Product\DetailProduct.cshtml" />
+    <Content Include="Views\HomePage\PartialProductbrand.cshtml" />
+    <Content Include="Views\Admin\ProductbrandIndex.cshtml" />
+    <Content Include="Views\Admin\CreateProductbrand.cshtml" />
+    <Content Include="Views\Admin\GetProductbrand.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

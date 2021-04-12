@@ -21,14 +21,23 @@
                         <img src="@item.ProductImage" alt="" width="200" height="300" />
                     </div>
                     <div class="left-text" style=" overflow: hidden;">
-                        <h4>@item.ProductName</h4>
+                        <h4>@item.ProductName.Substring(0,10)</h4>
                         <div>
-                            <p>@item.ProductDescription.Substring(0, 15) <a href="/Product/DetailProduct/@item.ID" type="button" class="btn btn-light"><strong>...</strong></a></p>
+                            <p>@item.ProductDescription.Substring(0, 10) <a href="/Product/DetailProduct/@item.ID" type="button" class="btn btn-light"><span class="icon icon-double-angle-right"></span></a></p>
                         </div>
                     </div>
                 </div>
             </div>
         }
+    </div>
+    <br />
+    <div style="text-align:center">
+        <a href="#" class="btn btn-info"><span class="icon icon-angle-up"></span></a>
+        <div style="text-align:left">
+            <label><strong>Online Ziyaretçi</strong></label><br />
+            <script id="_waue1d">var _wau = _wau || []; _wau.push(["colored", "wyt21rvx0e", "e1d", "6fa8dc20124d"]);</script>
+            <script async src="//waust.at/co.js"></script>
+        </div>
     </div>
 </div>
 

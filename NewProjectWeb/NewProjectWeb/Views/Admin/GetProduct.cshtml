@@ -9,18 +9,21 @@
 
 @using (Html.BeginForm("UpdateProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    @Html.LabelFor(x => x.ID, new { @hidden="hidden"})
-    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly",@hidden="hidden" })
+    @Html.LabelFor(x => x.ID, new { @hidden = "hidden" })
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly", @hidden = "hidden" })
     <br />
-    @Html.LabelFor(x => x.ProductName)
+    @*@Html.LabelFor(x => x.ProductName)*@
+    <label><strong>Ürün İsmi</strong></label>
     @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.ProductName, "", new { @style = "color:red" })
     <br />
-    @Html.LabelFor(x => x.ProductDescription)
+    @*@Html.LabelFor(x => x.ProductDescription)*@
+    <label><strong>Ürün Açıklaması</strong></label>
     @Html.TextAreaFor(x => x.ProductDescription, 5, 1, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.ProductDescription, "", new { @style = "color:red" })
     <br />
-    @Html.LabelFor(x => x.ProductImage)
+    @*@Html.LabelFor(x => x.ProductImage)*@
+    <label><strong>Görsel :</strong></label>
     <input type="file" name="ProductImage" />
     <br />
     @Html.ValidationMessageFor(x => x.ProductImage, "", new { @style = "color:red" })

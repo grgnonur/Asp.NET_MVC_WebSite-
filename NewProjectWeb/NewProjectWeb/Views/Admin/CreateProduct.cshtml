@@ -8,15 +8,18 @@
 <br />
 
 <form class="form-group" method="post" enctype="multipart/form-data">
-    @Html.LabelFor(x => x.ProductName)
+    @*@Html.LabelFor(x => x.ProductName)*@
+    <label><strong>Ürün İsmi</strong></label>
     @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.ProductName, "", new { @style = "color:red" })
     <br />
-    @Html.LabelFor(x => x.ProductDescription)
-    @Html.TextBoxFor(x => x.ProductDescription, new { @class = "form-control" })
+    @*@Html.LabelFor(x => x.ProductDescription)*@
+    <label><strong>Ürün Açıklaması</strong></label>
+    @Html.TextAreaFor(x => x.ProductDescription,5,1, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.ProductDescription, "", new { @style = "color:red" })
     <br />
-    @Html.LabelFor(x => x.ProductImage)<br />
+    @*@Html.LabelFor(x => x.ProductImage)<br />*@
+    <label><strong>Görsel :</strong></label>
     @*@Html.TextBoxFor(x => x.ProductImage, new { @class = "form-control" })*@
     <input type="file" name="ProductImage" />
     <br />

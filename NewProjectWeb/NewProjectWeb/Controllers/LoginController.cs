@@ -16,10 +16,12 @@ namespace NewProjectWeb.Controllers
     {
         DataBaseContext context = new DataBaseContext();
         // GET: Login
+        
         public ActionResult Login()
         {
             return View();
         }
+        
         [HttpPost]
         public ActionResult Login(Admin ad)
         {

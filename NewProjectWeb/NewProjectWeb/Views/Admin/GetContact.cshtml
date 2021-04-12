@@ -12,15 +12,18 @@
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly", @hidden = "hidden" })
 
     <br />
-    @Html.LabelFor(x => x.Address)
+    @*@Html.LabelFor(x => x.Address)*@
+    <label><strong>Adres</strong></label>
     @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.Address, "", new { @style = "color:red" })
     <br />
-    @Html.LabelFor(x => x.PhoneNumber)
+    @*@Html.LabelFor(x => x.PhoneNumber)*@
+    <label><strong>Telefon Numarası</strong></label>
     @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.PhoneNumber, "", new { @style = "color:red" })
     <br />
-    @Html.LabelFor(x => x.Mail)
+    @*@Html.LabelFor(x => x.Mail)*@
+    <label><strong>Mail Adresi</strong></label>
     @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.Mail, "", new { @style = "color:red" })
     <br />

@@ -1,0 +1,32 @@
+﻿@using NewProjectWeb.Models.Classes
+@model List<Productbrand>
+
+@{
+    ViewBag.Title = "ProductbrandIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>MARKALARIM</h1>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>Resim</th>
+        <th style="text-align:right">SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><img src="@item.ProductbrandImage" alt="Alternate Text" width="100" height="100" /></td>
+            <td style="text-align:right"><a href="/Admin/DeleteProductbrand/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/GetProductbrand/@item.ID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+<br />
+<a href="/Admin/CreateProductbrand" class="btn btn-info">Yeni Marka Ekle</a>
+

@@ -32,5 +32,11 @@ namespace NewProjectWeb.Controllers
             var degerler = context.Contacts.ToList();
             return PartialView(degerler);
         }
+
+        public PartialViewResult PartialProductbrand()
+        {
+            var degerler = context.Productbrands.ToList();
+            return PartialView(degerler);
+        }
     }
 }

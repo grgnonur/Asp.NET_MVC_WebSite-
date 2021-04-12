@@ -1,0 +1,22 @@
+﻿@model NewProjectWeb.Models.Classes.Productbrand
+@{
+    ViewBag.Title = "CreateProductbrand";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Marka Ekleme</h2>
+<br />
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+
+    @*@Html.LabelFor(x => x.ProductImage)<br />*@
+    <label><strong>Görsel :</strong></label>
+    @*@Html.TextBoxFor(x => x.ProductImage, new { @class = "form-control" })*@
+    <input type="file" name="ProductbrandImage" />
+    <br />
+    @Html.ValidationMessageFor(x => x.ProductbrandImage, "", new { @style = "color:red" })
+    <br /><br />
+    <button class="btn btn-primary">Marka Kaydet</button>
+</form>
+

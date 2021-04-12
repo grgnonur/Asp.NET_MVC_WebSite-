@@ -4,34 +4,37 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_WebLoyout.cshtml";
 }
+<!DOCTYPE html>
+<html>
+<head>
 
-<br />
-@*<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                @foreach (var item in Model)
-                {
-                    <img src="@item.ProductImage" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>@item.ProductName</h5>
-                        <p>@item.ProductDescription</p>
-                    </div>
-                }
+</head>
+<body>
+    <br />
 
-            </div>
+    <br />
+    <div class="container">
+        <br />
+        <br />
+        <div id="brand">@Html.Action("PartialProductbrand", "HomePage")</div>
+        <br /><br /><br />
+        <div id="about"> @Html.Action("PartialAbout", "HomePage")</div>
+        <br />
+        <div id="product">@Html.Action("PartialProduct", "HomePage")</div>
+        <br /><br /><br />
+        <div id="contact">@Html.Action("PartialContact", "HomePage")</div>
+    </div>
+    <br />
+    <div style="text-align:center">
+        <a href="#" class="btn btn-info" style="border-radius:10px;"><span class="icon icon-angle-up"></span></a>
+        <div style="text-align:left">
+            <label><strong>Online Ziyaretçi</strong></label><br />
+            <script id="_waue1d">var _wau = _wau || []; _wau.push(["colored", "wyt21rvx0e", "e1d", "6fa8dc20124d"]);</script>
+            <script async src="//waust.at/co.js"></script>
         </div>
-    </div>*@
+    </div>
 
-<img src="~/webprojetemplate/images/banner.jpg" alt="Alternate Text" />
-<br />
-<div class="container">
-    <br />
-    <br />
-    <div id="about"> @Html.Action("PartialAbout", "HomePage")</div>
-    <br />
-    <div id="product">@Html.Action("PartialProduct", "HomePage")</div>
-    <br /><br /><br />
-    <div id="contact">@Html.Action("PartialContact", "HomePage")</div>
+</body>
+</html>
 
-</div>
 
