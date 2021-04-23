@@ -8,7 +8,7 @@ MSSQL database kullanılmıştır. CodeFirst ile yapılmıştır.
 
 #Controller
 ---------------------
-Bu kısımda gerekli sayfalara ait işlemler yapılmıştır. Bu işlmeler ;
+Bu kısımda gerekli sayfalara ait işlemler yapılmıştır. Bu işlemler ;
 
 - Admin - Admin panelin yapıldığı sayfada CRUD işlemlerinin yapıldığı kısım.
 - HomePage - Sayfada asıl nelerin olması gerektiği gösterilmiştir. PartialView ile parçalara ayrılmıştır.
